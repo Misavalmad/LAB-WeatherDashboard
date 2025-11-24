@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('lainbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.weather-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ce25d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #a020a0;
+}
+
+button:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+#weather-result {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-left: 3px solid #ce25d1;
+}
+
+#weather-result p {
+    color: white;
+    margin: 10px 0;
+}
+
+#weather-result span {
+    color: #ce25d1;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
