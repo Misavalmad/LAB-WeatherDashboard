@@ -3,15 +3,15 @@ console.log('Hola API clima');
 function getWeather() {
     console.log('Button clicked');
     
-    var lat = document.getElementById('latitude-input').value;
-    var lon = document.getElementById('longitude-input').value;
+    let lat = document.getElementById('latitude-input').value;
+    let lon = document.getElementById('longitude-input').value;
     
     if (lat == '' || lon == '') {
         alert('Please enter latitude and longitude');
         return;
     }
     
-    var button = document.getElementById('fetch-btn');
+    let button = document.getElementById('fetch-btn');
     button.innerHTML = 'Loading...';
     button.disabled = true;
     
@@ -19,7 +19,7 @@ function getWeather() {
 }
 
 function fetchWeather(latitude, longitude) {
-    var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&current_weather=true';
+    let url = 'https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&current_weather=true';
     
     console.log('Fetching: ' + url);
     
@@ -31,8 +31,8 @@ function fetchWeather(latitude, longitude) {
         console.log('Data received:', data);
         
         if (data.current_weather) {
-            var temp = data.current_weather.temperature;
-            var wind = data.current_weather.windspeed;
+            let temp = data.current_weather.temperature;
+            let wind = data.current_weather.windspeed;
             
             document.getElementById('temp-display').textContent = temp;
             document.getElementById('wind-display').textContent = wind;
@@ -46,7 +46,7 @@ function fetchWeather(latitude, longitude) {
         alert('Error: ' + error.message);
     })
     .finally(function() {
-        var button = document.getElementById('fetch-btn');
+        let button = document.getElementById('fetch-btn');
         button.innerHTML = 'Get Weather';
         button.disabled = false;
     });
